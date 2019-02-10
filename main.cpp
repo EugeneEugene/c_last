@@ -2,6 +2,7 @@
 #include "song.hpp"
 #include <string>
 #include <iostream>
+#include <linked_list.hpp>
 
 void test_add() {
     SongList sl;
@@ -17,8 +18,18 @@ void test_add() {
     
 }
 
+void test_lsd(){
+    LinkedList list;
+    // Node node{Song{std::string("sa"),std::string("c"),std::string("a"),19}}; 
+    list.push_back(Song{std::string("sa"),std::string("c"),std::string("a"),19});
+    list.push_back(Song{std::string("sb"),std::string("a"),std::string("a"),7});
+    list.push_back(Song{std::string("sc"),std::string("a"),std::string("a"),7}); 
+    auto song = list.pop_back();
+    std::cout << "hui " << song.name << std::endl;
 
+}
 
 int main() {
-    test_add();
+    test_lsd(); 
+
 }
