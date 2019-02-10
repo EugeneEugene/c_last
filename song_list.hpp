@@ -1,3 +1,6 @@
+#ifndef SONG_LIST_HPP
+#define SONG_LIST_HPP
+
 #include <string>
 #include "song.hpp" 
 #include <list>
@@ -15,11 +18,13 @@ class SongList {
     void add(Song const &item, bool at_begin=true);
     void remove(bool first=false);
     Song find_longest();
-    void total_time();
+    int total_time();
     void print_songs();
 
-    ~SongList();
+    // ~SongList();
 
     private:
     std::list<Song>_list;
 };
+
+#endif
