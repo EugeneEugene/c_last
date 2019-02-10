@@ -27,6 +27,20 @@ void test_lsd(){
     auto song = list.pop_back();
     std::cout << "hui " << song.name << std::endl;
 
+    song = list.pop_front();
+    std::cout <<" pizda " << song.name << std::endl;
+
+        song = list.pop_front();
+    std::cout <<" pizda " << song.name << std::endl; 
+
+    list.push_front(Song{std::string("gay1"),std::string("c"),std::string("a"),19}); 
+        list.push_front(Song{std::string("gay2"),std::string("c"),std::string("a"),19}); 
+        list.push_back(Song{std::string("sa"),std::string("c"),std::string("a"),19});
+    song = list.pop_back(); 
+     std::cout <<" pizda " << song.name << std::endl; 
+    song = list.pop_back(); 
+     std::cout <<" pizda " << song.name << std::endl; 
+
 }
 
 int main() {

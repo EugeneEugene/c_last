@@ -16,6 +16,7 @@ class LinkedList {
     public:
     void push_back(Song const &song);
     void push_front(Song const &song);
+    bool is_empty();
     Song pop_back();
     Song pop_front();
 };

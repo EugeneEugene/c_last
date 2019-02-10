@@ -70,3 +70,32 @@ Song LinkedList::pop_back() {
     penult->next = NULL;
     return song;
 }                
+
+Song LinkedList::pop_front() {
+    if (_first == NULL) {
+        std::cout<<"idi nahui cuckold"<<std::endl;
+        return Song();
+    } 
+    Song song = _first->item; 
+    auto next = _first->next;
+    delete _first; 
+    _first = next;
+    return song;
+}
+
+void LinkedList::push_front(Song const &song) {
+    if(_first == NULL) {
+        _first = new Node(song); 
+        // _first->item = song; 
+        _first->next = NULL;
+    } else { 
+        auto new_first = new Node(song);
+        // new_first->song = song;
+        new_first->next = _first;
+        _first = new_first;
+    }
+}
+
+bool is_empty() {
+    return _first == NULL;
+}
