@@ -1,3 +1,5 @@
+#ifndef SONG_HPP
+#define SONG_HPP
 #include <string>
 
 struct Song { 
@@ -6,3 +8,4 @@ struct Song {
     std::string album;
     int length; 
 };
+#endif
