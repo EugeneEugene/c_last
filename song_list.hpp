@@ -1,5 +1,6 @@
 #include <string>
-#include "song.hpp"
+#include "song.hpp" 
+#include <list>
 
 class SongList {
     public:
@@ -11,7 +12,7 @@ class SongList {
     void save(std::string const &path);
 
     void clear();
-    void add(Song item, bool at_begin=true);
+    void add(Song const &item, bool at_begin=true);
     void remove(bool first=false);
     Song find_longest();
     void total_time();
@@ -20,4 +21,5 @@ class SongList {
     ~SongList();
 
     private:
+    std::list<Song>_list;
 };
