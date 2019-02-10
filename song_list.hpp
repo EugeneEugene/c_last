@@ -1,6 +1,6 @@
 #include <string>
+#include "song.hpp"
 
-template <class ItemT>
 class SongList {
     public:
     SongList();
@@ -11,9 +11,9 @@ class SongList {
     void save(std::string const &path);
 
     void clear();
-    void add(ItemT item, bool at_begin=true);
+    void add(Song item, bool at_begin=true);
     void remove(bool first=false);
-    ItemT find_longest();
+    Song find_longest();
     void total_time();
     void print_songs();
 
